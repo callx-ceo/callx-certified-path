@@ -9,6 +9,10 @@ import TraineeDashboard from "./pages/trainee/TraineeDashboard";
 import ModuleView from "./pages/trainee/ModuleView";
 import QuizView from "./pages/trainee/QuizView";
 import SimulationView from "./pages/trainee/SimulationView";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import CourseManagement from "./pages/admin/CourseManagement";
+import CourseEditor from "./pages/admin/CourseEditor";
+import UserManagement from "./pages/admin/UserManagement";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +30,10 @@ const App = () => (
           <Route path="/trainee/module/:moduleId" element={<ModuleView />} />
           <Route path="/trainee/quiz/:lessonId" element={<QuizView />} />
           <Route path="/trainee/simulation/:lessonId" element={<SimulationView />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/courses" element={<CourseManagement />} />
+          <Route path="/admin/courses/:courseId" element={<CourseEditor />} />
+          <Route path="/admin/users" element={<UserManagement />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
